@@ -1,32 +1,61 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <TopNav />
+    <transition name="fade" mode="out-in">
+      <router-view />
+    </transition>
+    <Footer Breadcrumbs="首页" />
   </div>
 </template>
 
+<script>
+// 顶部导航栏
+import TopNav from "@/components/common/TopNav.vue";
+// 标题组件
+import TitleBar from "@/components/common/TitleBar.vue";
+// 底部组件
+import Footer from "@/components/common/Footer.vue";
+export default {
+  components: { TopNav, Footer },
+};
+</script>
+
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
 }
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+div {
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 </style>
