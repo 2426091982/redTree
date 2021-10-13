@@ -99,8 +99,12 @@ export default {
     handleClose(done) {
       done();
     },
-  toPath(path, order = "/first") {
-      if (path == "/index" || path == "/newsDetail" || path == "/cooperationDetail") {
+    toPath(path, order = "/first") {
+      if (
+        path == "/index" ||
+        path == "/newsDetail" ||
+        path == "/cooperationDetail"
+      ) {
         order = "";
       }
       this.$router.push({
@@ -137,7 +141,7 @@ export default {
 
     &:hover ~ .curtain {
       height: 310px;
-      box-shadow: 0 15px 30px rgb(0 0 0 / 10%);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     }
     .logo {
       flex: 2;
