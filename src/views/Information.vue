@@ -337,6 +337,13 @@ export default {
       this.activeName = this.$route.params.order;
     }
   },
+  watch: {
+    "$route.path": function(newVal, oldVal) {
+      if (this.$route.params.order) {
+        this.activeName = this.$route.params.order;
+      }
+    },
+  },
 };
 </script>
 <style lang="less" scoped>

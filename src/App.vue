@@ -4,7 +4,7 @@
     <transition name="fade" mode="out-in">
       <router-view />
     </transition>
-    <Footer Breadcrumbs="首页" />
+    <Footer />
   </div>
 </template>
 
@@ -58,4 +58,27 @@ li {
   opacity: 0;
   transition: opacity 0.5s;
 }
+
+
+</style>
+
+<style lang="less" >
+.el-tabs__item {
+  height: 60px !important;
+  line-height: 60px !important;
+  font-size: 18px !important;
+}
+@media screen and (max-width: 1024px) {
+  .el-tabs__item {
+    height: 40px !important;
+  line-height: 40px !important;
+  font-size: 14px !important;
+  }
+  .el-tabs__nav-scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
 </style>

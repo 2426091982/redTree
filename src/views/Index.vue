@@ -36,7 +36,7 @@
         致力成为中国知名培养和输送优秀职业人的基地，嫁接各类名校，植入先进理念，大胆实践，积极创新办学模式，目前已
         经总结和形成了具有红树林特征的办学经验，取得了辉煌的成绩。
       </p>
-      <div class="more" @click="$router.push('/AboutUs')">
+      <div class="more" @click="$router.push('/aboutUs/first')">
         了解更多<span>></span>
       </div>
       <div class="aboutBox">
@@ -204,7 +204,7 @@ export default {
       if (
         path == "/index" ||
         path == "/newsDetail" ||
-        path == "/cooperationDetail"
+        path == "/cooperationDetail" 
       ) {
         order = "";
       }

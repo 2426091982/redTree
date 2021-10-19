@@ -1,9 +1,6 @@
 <template>
   <div class="NewsDetail">
-    <TitleBox
-      title="凝心聚力，共赢未来 | 广州高新医药技校隆重签约云职场平台"
-      text="2020-09-23"
-    />
+    <TitleBox title="" text="" />
 
     <div class="content">
       <el-row :gutter="40">
@@ -11,8 +8,9 @@
           <div class="article">
             <div class="titleText">
               <div class="block"></div>
-              <h3>正文阅读</h3>
+              <h3>凝心聚力，共赢未来 | 广州高新医药技校隆重签约云职场平台</h3>
             </div>
+            <p class="time">2015-06-18</p>
             <p>
               9月18日上午11:30 在高新教育集团中坚楼会议室
               <br />
@@ -129,6 +127,7 @@ export default {
     width: 1200px;
     margin: 0 auto;
     padding: 50px;
+    overflow: hidden;
 
     .el-row {
       .el-col {
@@ -151,7 +150,9 @@ export default {
             h3 {
             }
           }
-
+          .time {
+            padding: 10px 0 0 !important;
+          }
           p {
             padding: 20px 0;
             font-size: 14px;
@@ -211,6 +212,7 @@ export default {
 @media screen and (max-width: 1024px) {
   .content {
     width: 100% !important;
+    padding: 0 !important;
   }
 }
 </style>

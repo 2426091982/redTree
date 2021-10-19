@@ -24,7 +24,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .titleBox {
-  height: 300px;
+  height: 150px;
   background: url("~@/assets/cooperationDetail/titleBg.png") no-repeat;
   background-size: cover;
   .titleBoxMain {

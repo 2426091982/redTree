@@ -288,6 +288,7 @@ export default {
         ul {
           background-color: #6095ff;
           padding: 50px 0;
+          margin-bottom: 60px;
           li {
             width: 80%;
             margin: 0 auto;
