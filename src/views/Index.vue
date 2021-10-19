@@ -289,7 +289,7 @@ div.CompanyProfile {
 }
 // 教育模块
 .Education {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   background-image: url("~@/assets/index/educationBg.jpg");
   background-attachment: fixed;
@@ -499,7 +499,6 @@ div.CompanyProfile {
 @media screen and (max-width: 1200px) {
   .CompanyProfile,
   .AboutUS,
-  .Education,
   .News {
     width: 1024px !important;
   }
