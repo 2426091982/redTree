@@ -138,7 +138,6 @@ export default {
     transition: 0.2s all;
     height: 60px;
     background-color: #fff;
-
     &:hover ~ .curtain {
       height: 310px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
