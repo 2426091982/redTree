@@ -9,7 +9,7 @@ export default function MapLoader() {
       script.type = "text/javascript";
       script.async = true;
       script.src =
-        "http://webapi.amap.com/maps?v=1.4.11&callback=initAMap&key=0daf208d78c8e6727bb168b3d3f056cf";
+        "https://webapi.amap.com/maps?v=1.4.11&callback=initAMap&key=0daf208d78c8e6727bb168b3d3f056cf";
       script.onerror = reject;
       document.head.appendChild(script);
     }
