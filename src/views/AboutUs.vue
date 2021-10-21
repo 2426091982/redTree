@@ -147,8 +147,8 @@
                 </el-row>
               </el-col>
               <el-col :md="12">
-                <div>
-                  <img src="@/assets/aboutUs/map.png" alt="" />
+                <div id="container">
+                  <!-- <img src="@/assets/aboutUs/map.png" alt="" /> -->
                 </div>
               </el-col>
             </el-row>
@@ -167,12 +167,15 @@ import TitleBar from "@/components/common/TitleBar.vue";
 import TopNav from "@/components/common/TopNav.vue";
 // 底部组件
 import Footer from "@/components/common/Footer.vue";
+// 高德地图初始化
+import MapLoader from "../utils/AMap";
 export default {
   name: "AboutUs",
   props: {},
   data() {
     return {
       activeName: "first",
+      map: null,
     };
   },
   components: { TitleBox, TopNav, Footer, TitleBar },
@@ -181,16 +184,34 @@ export default {
       console.log(tab, event);
     },
   },
- mounted() {
+  mounted() {
     if (this.$route.params.order) {
       this.activeName = this.$route.params.order;
     }
+    let that = this;
+    MapLoader().then(
+      (AMap) => {
+        console.log("地图加载成功");
+        that.map = new AMap.Map("container", {
+          center: [113.23397822090148, 23.472986646850924],
+          zoom: 11,
+          viewMode: "3D",
+        });
+        let marker = new AMap.Marker({
+          position: [113.23397822090148, 23.472986646850924],
+        });
+        that.map.add(marker); //添加到地图
+      },
+      (e) => {
+        console.log("地图加载失败", e);
+      }
+    );
   },
   watch: {
     "$route.path": function(newVal, oldVal) {
       if (this.$route.params.order) {
-      this.activeName = this.$route.params.order;
-    }
+        this.activeName = this.$route.params.order;
+      }
     },
   },
 };
@@ -280,6 +301,10 @@ export default {
 </style>
 
 <style lang="less" scope>
+#container {
+  width: 100%;
+  height: 400px;
+}
 @media screen and (max-width: 1200px) {
   .taber {
     width: 1024px !important;

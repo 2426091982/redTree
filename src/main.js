@@ -3,10 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "element-ui/lib/theme-chalk/index.css";
-import "@/style/iconfont.css"
+import "@/style/iconfont.css";
+  
 Vue.config.productionTip = false;
 
-import { 
+import {
   Button,
   Select,
   Container,
@@ -20,8 +21,8 @@ import {
   CarouselItem,
   Divider,
   Tabs,
-  TabPane
- } from "element-ui";
+  TabPane,
+} from "element-ui";
 
 Vue.use(Tabs);
 Vue.use(TabPane);
@@ -37,8 +38,6 @@ Vue.use(Col);
 Vue.use(Drawer);
 Vue.use(Carousel);
 Vue.use(CarouselItem);
-
-
 
 new Vue({
   router,
