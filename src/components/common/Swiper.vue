@@ -41,7 +41,7 @@ export default {
   mounted() {
     window.onresize = () => {
       if (document.body.clientWidth < 1024) {
-        this.carouselHeight = "300px";
+        this.carouselHeight = "200px";
       } else {
         this.carouselHeight = "500px";
       }
